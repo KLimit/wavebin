@@ -51,7 +51,8 @@ Homepage = "https://wavebin.vksdr.com/"
 Repository = "https://github.com/sam210723/wavebin"
 
 [tool.hatch]
-version.path = "wavebin/__main__.py"
+version.path = "wavebin/config.py"
+version.pattern = "version:.*(?P<version>[0-9.]+)"
 envs.default.path = ".hatch"
 build.targets.wheel.packages = ["wavebin"]
 build.targets.sdist.include = ["/wavebin"]
